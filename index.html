@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeGA</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="./static/js/dics.original.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', domReady);
+
+        function domReady() {
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[0],
+                textPosition: 'top'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[1],
+                textPosition: 'top'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[2],
+                textPosition: 'top'
+            });
+
+            new Dics({
+              container: document.querySelectorAll('.b-dics')[3],
+              textPosition: 'top'
+          });
+
+          new Dics({
+              container: document.querySelectorAll('.b-dics')[4],
+              textPosition: 'top'
+          });
+        }
+  </script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns ≈">
+        <div class="column has-text-centered">
+          <img src="./static/images/logo.png" alt="MeGA LOGO" width="300">
+          <h1 class="title is-1 publication-title">Hybrid <u>Me</u>sh-<u>G</u>aussian Head <u>A</u>vatar for High-Fidelity Rendering and Head Editing</h1>
+          
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://conallwang.github.io/">Cong Wang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              Di Kang<sup>2</sup>,</span>
+            <span class="author-block">
+              He-Yi Sun<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Shen-Han Qian<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Zi-Xuan Wang<sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://linchaobao.github.io/">Linchao Bao</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              Song-Hai Zhang</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Tencent AI Lab</span>
+            <span class="author-block"><sup>3</sup>Technical University of Munich</span>
+            <br>
+            <span class="author-block"><sup>4</sup>Carnegie Mellon University</span>
+            <span class="author-block"><sup>5</sup>University of Birmingham</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="insert"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/conallwang/MeGA" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <h2 class="title is-3">Head Editing Results</h2> -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/306_duola_253hair_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/306_eccv_302hair_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/304_mega_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/253_emoji_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/218_626_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/218_face_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/218_ym_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/304_eccvheart_0.3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <ol class="toc-list" role="list">
+      <li>
+        <span class="title is-2">Table Of Contents</span>
+        <br><br>
+
+        <a href="#nvs_comp" style="font-size:24px">
+          &#x2022;
+          <span class="page">Comparisons on Novel View Synthesis</span>
+        </a>
+    
+        <ol role="list" style="font-size:20px">
+          <a href="#nvs_tab">
+            &#x2022;
+            <span class="page">The quantitative results</span>
+          </a>
+          <br>
+
+          <a href="#nvs_video">
+            &#x2022;
+            <span class="page">The qualitative results</span>
+          </a>
+        </ol>
+
+        <a href="#cross_comp" style="font-size:24px">
+          &#x2022;
+          <span class="page">Comparisons on Cross-identity Reenactment</span>
+        </a>
+    
+        <ol role="list" style="font-size:20px">
+          <a href="#cross_nersemble">
+            &#x2022;
+            <span class="page">Driving with Extreme Expressions</span>
+          </a>
+          <br>
+
+          <a href="#cross_voca">
+            &#x2022;
+            <span class="page">Driving with Talking Head</span>
+          </a>
+          <br>
+
+          <a href="#cross_edit">
+            &#x2022;
+            <span class="page">Driving Edited Head Avatars</span>
+          </a>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="nvs_comp" class="title is-2">Comparisons on Novel View Synthesis</h2>
+
+    <h2 id="nvs_tab" class="title is-4"><br>The quantitative comparisons on novel view synthesis</h3>
+    <br>
+    <div class="columns center">
+      <img src="./static/images/nvs_tab_with_title.png" alt="NVS Table">
+    </div>
+    
+    
+    <h2 id="nvs_video" class="title is-4"><br><br>The qualitative comparisons on novel view synthesis</h3>
+    <p>
+      MeGA captures <b>more accurate target expressions</b> and <b>detailed skin textures</b> (e.g., forehead wrinkles), while <b>avoiding artifacts</b> inside the mouth.
+    </p>
+    <video id="nvs_264" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/264_nvs.mp4"
+              type="video/mp4">
+    </video>
+    <video id="nvs_304" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/304_nvs.mp4"
+              type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="cross_comp" class="title is-2">Comparisons on Cross-identity Reenactment</h2>
+    
+    <h2 id="cross_nersemble" class="title is-4"><br>Driving with Extreme Expressions</h3>
+    <video id="CROSS_218" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/218_cross302.mp4"
+              type="video/mp4">
+    </video>
+
+    <h2 id="cross_voca" class="title is-4"><br><br>Driving with Talking Head (with audio)</h3>
+    <p> Data from VOCA (Capture, learning, and synthesis of 3D speaking styles, CVPR 2019). <br> 
+    </p>
+    <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/218_138s1_with_audio.mp4"
+              type="video/mp4">
+    </video>
+    <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/218_137s2_with_audio.mp4"
+              type="video/mp4">
+    </video>
+
+    <h2 id="cross_edit" class="title is-4"><br><br>Driving Edited Head Avatars</h3>
+    <video id="CROSS_218_EDIT" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/cross302_edit.mp4"
+              type="video/mp4">
+    </video>
+
+    <video id="VOCA_218_EDIT" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/voca_edit.mp4"
+              type="video/mp4">
+    </video>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Cite</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p align="center">
+            © 2024 · Conallwang | Last updated: Apr. 28, 2024.
+            <br>
+            This homepage is based on <a href="https://github.com/nerfies/nerfies.github.io/tree/main">nerfies</a> template. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
