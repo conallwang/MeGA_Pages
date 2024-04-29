@@ -16,7 +16,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/interact-svgrepo-com.svg">
 
   <script src="./static/js/dics.original.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -137,25 +137,19 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/306_duola_253hair_0.3x.mp4"
+            <source src="./static/videos/306_duola_0.3x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/306_eccv_302hair_0.3x.mp4"
+            <source src="./static/videos/306_mega_0.3x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/304_mega_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/253_emoji_0.3x.mp4"
+            <source src="./static/videos/218_ym_0.3x.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -173,13 +167,7 @@
         </div>
         <div class="item item-coffee">
           <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/218_ym_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/304_eccvheart_0.3x.mp4"
+            <source src="./static/videos/218_mega_0.3x.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -187,6 +175,28 @@
     </div>
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Creating high-fidelity head avatars from multi-view videos is a core issue for many AR/VR applications. However, existing methods usually struggle to obtain high-quality renderings for all different head components simultaneously since they use one single representation to model components with drastically different characteristics (e.g., skin vs. hair). In this paper, we propose a Hybrid Mesh-Gaussian Head Avatar (MeGA) that models different head components with more suitable representations. Specifically, we select an enhanced FLAME mesh as our facial representation and predict a UV displacement map to provide per-vertex offsets for improved personalized geometric details. To achieve photorealistic renderings, we obtain facial colors using deferred neural rendering and disentangle neural textures into three meaningful parts. For hair modeling, we first build a static canonical hair using 3D Gaussian Splatting. A rigid transformation and an MLP-based deformation field are further applied to handle complex dynamic expressions. Combined with our occlusion-aware blending, MeGA generates higher-fidelity renderings for the whole head and naturally supports more downstream tasks. Experiments on the NeRSemble dataset demonstrate the effectiveness of our designs, outperforming previous state-of-the-art methods and supporting various editing functionalities, including hairstyle alteration and texture editing.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <br>
+    <img id="teaser" src="./static/images/pipeline_git.png" height="100%">
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -215,7 +225,7 @@
 
         <a href="#cross_comp" style="font-size:24px">
           &#x2022;
-          <span class="page">Comparisons on Cross-identity Reenactment</span>
+          <span class="page">Comparisons on Cross-identity Reenactment (TBA)</span>
         </a>
     
         <ol role="list" style="font-size:20px">
@@ -256,10 +266,6 @@
     <p>
       MeGA captures <b>more accurate target expressions</b> and <b>detailed skin textures</b> (e.g., forehead wrinkles), while <b>avoiding artifacts</b> inside the mouth.
     </p>
-    <video id="nvs_264" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/264_nvs.mp4"
-              type="video/mp4">
-    </video>
     <video id="nvs_304" autoplay controls muted loop playsinline height="100%">
       <source src="./static/videos/304_nvs.mp4"
               type="video/mp4">
@@ -267,41 +273,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 id="cross_comp" class="title is-2">Comparisons on Cross-identity Reenactment</h2>
-    
-    <h2 id="cross_nersemble" class="title is-4"><br>Driving with Extreme Expressions</h3>
-    <video id="CROSS_218" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/218_cross302.mp4"
-              type="video/mp4">
-    </video>
-
-    <h2 id="cross_voca" class="title is-4"><br><br>Driving with Talking Head (with audio)</h3>
-    <p> Data from VOCA (Capture, learning, and synthesis of 3D speaking styles, CVPR 2019). <br> 
-    </p>
-    <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/218_138s1_with_audio.mp4"
-              type="video/mp4">
-    </video>
-    <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/218_137s2_with_audio.mp4"
-              type="video/mp4">
-    </video>
-
-    <h2 id="cross_edit" class="title is-4"><br><br>Driving Edited Head Avatars</h3>
-    <video id="CROSS_218_EDIT" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/cross302_edit.mp4"
-              type="video/mp4">
-    </video>
-
-    <video id="VOCA_218_EDIT" autoplay controls muted loop playsinline height="100%">
-      <source src="./static/videos/voca_edit.mp4"
-              type="video/mp4">
-    </video>
-
-  </div>
-</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
