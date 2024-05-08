@@ -17,6 +17,7 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/interact-svgrepo-com.svg">
+  <link rel="stylesheet" href="./static/css/app.css">
 
   <script src="./static/js/dics.original.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,6 +25,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/video-comparison.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', domReady);
 
@@ -128,78 +130,27 @@
   </div>
 </section>
 
-
-
 <!-- <h2 class="title is-3">Head Editing Results</h2> -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/306_duola_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/306_mega_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/218_ym_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/218_626_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/218_face_0.3x.mp4"
-                    type="video/mp4">
-          </video>
+      <div class="columns is-centered" style="column-gap: 20px;">
+        <div class="item item-coffee">
+            <video class="video" width="100%" id="coffee" loop playsinline autoplay muted src="./static/videos/306_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffeeMerge"></canvas>
         </div>
         <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/218_mega_0.3x.mp4"
-                    type="video/mp4">
-          </video>
+            <video class="video" width="100%" id="coffee1" loop playsinline autoplay muted src="./static/videos/218_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffee1Merge"></canvas>
         </div>
         <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/253_emo1_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/253_emo2_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/253_emos_0.3x.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/304_megaheart_0.3x.mp4"
-                    type="video/mp4">
-          </video>
+            <video class="video" width="100%" id="coffee2" loop playsinline autoplay muted src="./static/videos/264_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffee2Merge"></canvas>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -235,15 +186,14 @@
         </a>
     
         <ol role="list" style="font-size:20px">
-          <a href="#nvs_tab">
-            &#x2022;
-            <span class="page">The quantitative results</span>
-          </a>
-          <br>
-
           <a href="#nvs_video">
             &#x2022;
             <span class="page">The qualitative results</span>
+          </a>
+          <br>
+          <a href="#nvs_tab">
+            &#x2022;
+            <span class="page">The quantitative results</span>
           </a>
         </ol>
 
@@ -270,6 +220,11 @@
             <span class="page">Driving Edited Head Avatars</span>
           </a>
         </ol>
+
+        <a href="#head_edit" style="font-size:24px">
+          &#x2022;
+          <span class="page">More Head Editting Results</span>
+        </a>
       </li>
     </ol>
   </div>
@@ -279,13 +234,6 @@
   <div class="container is-max-desktop">
     <h2 id="nvs_comp" class="title is-2">Comparisons on Novel View Synthesis</h2>
 
-    <h2 id="nvs_tab" class="title is-4"><br>The quantitative comparisons on novel view synthesis</h3>
-    <br>
-    <div class="columns center">
-      <img src="./static/images/nvs_tab_with_title.png" alt="NVS Table">
-    </div>
-    
-    
     <h2 id="nvs_video" class="title is-4"><br><br>The qualitative comparisons on novel view synthesis</h3>
     <p>
       MeGA captures <b>more accurate target expressions</b> and <b>detailed skin textures</b> (e.g., forehead wrinkles), while <b>avoiding artifacts</b> inside the mouth.
@@ -298,6 +246,12 @@
       <source src="./static/videos/304_nvs.mp4"
               type="video/mp4">
     </video>
+
+    <h2 id="nvs_tab" class="title is-4"><br>The quantitative comparisons on novel view synthesis</h3>
+    <br>
+    <div class="columns center">
+      <img src="./static/images/nvs_tab_with_title.png" alt="NVS Table">
+    </div>
   </div>
 </section>
 
@@ -338,6 +292,75 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="head_edit" class="title is-2">More Head Editting Results</h2>
+
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item item-coffee">
+        <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/306_duola_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-chair-tp">
+        <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/306_mega_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-shiba">
+        <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/218_ym_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-blueshirt">
+        <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/218_626_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-mask">
+        <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/218_face_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-coffee">
+        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/218_mega_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-coffee">
+        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/253_emo1_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-coffee">
+        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/253_emo2_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-coffee">
+        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/253_emos_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="item item-coffee">
+        <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/304_megaheart_0.3x.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">Cite</h2>
@@ -357,7 +380,7 @@
       <div class="column is-8">
         <div class="content">
           <p align="center">
-            © 2024 · Conallwang | Last updated: May. 06, 2024.
+            © 2024 · Conallwang | Last updated: May. 08, 2024.
             <br>
             This homepage is based on <a href="https://github.com/nerfies/nerfies.github.io/tree/main">nerfies</a> template. 
           </p>
