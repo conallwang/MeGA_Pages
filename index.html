@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeGA</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+  <link rel="stylesheet" href="./static/css/app.css">
+
+  <script src="./static/js/dics.original.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video-comparison.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', domReady);
+
+        function domReady() {
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[0],
+                textPosition: 'top'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[1],
+                textPosition: 'top'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[2],
+                textPosition: 'top'
+            });
+
+            new Dics({
+              container: document.querySelectorAll('.b-dics')[3],
+              textPosition: 'top'
+          });
+
+          new Dics({
+              container: document.querySelectorAll('.b-dics')[4],
+              textPosition: 'top'
+          });
+        }
+  </script>
+
+  <style>
+    .note {
+      background-color: #f9f9f9;
+      border-left: 4px solid #007BFF;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .note strong {
+      color: #0056b3; /* Subtle blue for emphasis */
+    }
+    /* Optional alternative: underline emphasis */
+    .note em {
+      text-decoration: underline;
+      color: inherit; /* Keeps it consistent with the global text color */
+    }
+    
+
+
+    .toc {
+        background-color: #f4f4f9; 
+        border: 1px solid #ddd; 
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        font-size: 1.4em; /* Larger font for the entire ToC */
+    }
+    .toc h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .toc ul {
+        list-style-type: none; 
+        padding-left: 0;
+    }
+    .toc li {
+        margin: 5px 0;
+    }
+    .toc ul ul {
+        padding-left: 20px;
+    }
+    .toc a {
+        text-decoration: none;
+        color: #007BFF;
+        transition: color 0.3s ease;
+    }
+    .toc a:hover {
+        color: #0056b3;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    section {
+        margin-bottom: 40px;
+    }
+    /* Add icons before captions */
+    .toc li a:before {
+        margin-right: 8px; 
+    }
+    /* Specific icons for sections */
+    .toc li a#section1:before {
+        content: "\f015"; /* Home icon */
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900;
+    }
+    .toc li a#section2:before {
+        content: "\f0c8"; /* Cogs (Features) icon */
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900;
+    }
+    .toc li a#section3:before {
+        content: "\f0e7"; /* Rocket icon */
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900;
+    }
+    .toc li a#section4:before {
+        content: "\f1e6"; /* Clipboard (Conclusion) icon */
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900;
+    }
+    .toc li a ul li a:before {
+        content: "\f00c"; /* Check mark for sub-items */
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns ≈">
+        <div class="column has-text-centered">
+          <!-- <img src="./static/images/logo.png" alt="MeGA LOGO" width="300"> -->
+          <img src="./static/images/logo_v1.png" alt="项目图标" width="200">
+          <h1 class="title is-1 publication-title"> Hybrid <u>Me</u>sh-<u>G</u>aussian Head <u>A</u>vatar for High-Fidelity Rendering and Head Editing</h1>
+          
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://conallwang.github.io/">Cong Wang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              Di Kang<sup>2</sup>,</span>
+            <span class="author-block">
+              He-Yi Sun<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Shen-Han Qian<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Zi-Xuan Wang<sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://linchaobao.github.io/">Linchao Bao</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Song-Hai Zhang</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>Tencent,</span>
+            <span class="author-block"><sup>3</sup>Technical University of Munich,</span>
+            <span class="author-block"><sup>4</sup>Carnegie Mellon University</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container" style="text-align: center;" >
+      <span style="color:red" class="title is-2"> Drag the silde to see the magic! </span>
+      <br>
+      <br>
+      <div class="columns is-centered" style="column-gap: 20px;">
+        <div class="item item-coffee">
+            <video class="video" width="100%" id="coffee" loop playsinline autoplay muted src="./static/videos/306_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffeeMerge"></canvas>
+        </div>
+        <div class="item item-coffee">
+            <video class="video" width="100%" id="coffee1" loop playsinline autoplay muted src="./static/videos/218_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffee1Merge"></canvas>
+        </div>
+        <div class="item item-coffee">
+            <video class="video" width="100%" id="coffee2" loop playsinline autoplay muted src="./static/videos/264_comp.mp4" onplay="resizeAndPlay(this)" style="height: 0px;"></video>
+            <canvas height=0 class="videoMerge" id="coffee2Merge"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-max-desktop">
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#nvs_comp">Comparisons on Novel View Synthesis</a></li>
+      <li><a href="#nes_comp">Comparisons on Novel Expression Synthesis</a></li>
+      <li>
+        <a href="#cross_comp">Comparisons on Cross-identity Reenactment</a>
+        <ul>
+          <li><a href="#cross_normal">Driven by Normal Expressions</a></li>
+          <li><a href="#cross_extreme">Driven by Extreme Expressions</a></li>
+          <li><a href="#cross_voca">Driven by Talking Head</a></li>
+          <li><a href="#cross_edit">Driving Edited Head Avatars</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="nvs_comp" class="title is-2">Comparisons on Novel View Synthesis</h2>
+
+    <p>
+      MeGA captures <strong>more accurate target expressions</strong> and <strong>detailed skin textures</strong> (e.g., forehead wrinkles), while <strong>avoiding artifacts</strong> inside the mouth.
+    </p>
+    <br>
+    <p class="note">
+      The Gaussian Head Avatar actually is <strong>not consistent</strong> with the ground truth (even if they look similar), especially at the beginning of the dynamic expression video (i.e., Row 2 and 4) when there is <strong>a noticeable location shift</strong>.
+    </p>
+    <video id="nvs306_exp2_95" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nvs306_exp2_95.mp4"
+              type="video/mp4">
+    </video>
+    <video id="nvs306_exp2_09" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nvs306_exp2_09.mp4"
+              type="video/mp4">
+    </video>
+
+    <video id="nvs306_exp2_95" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nvs253_exp8_123.mp4"
+              type="video/mp4">
+    </video>
+    <video id="nvs253_exp8_08" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nvs253_exp8_08.mp4"
+              type="video/mp4">
+    </video>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="nes_comp" class="title is-2">Comparisons on Novel Expression Synthesis</h2>
+
+    <p>
+      When rendering novel expressions, MeGA produces <strong>more detailed facial textures</strong> while allowing <strong>better matching of target expressions</strong>.
+    </p>
+    <br>
+    <p class="note">
+      As mentioned in our main text, we use <strong>the same train/test split as GaussianAvatars.</strong>
+      Compared to the split used by the original Gaussian Head Avatar (GHA), our split uses <strong>much less expression sequences for training</strong>, amplifing <strong>the weakness of GHA in rendering novel expressions</strong>.
+      Training details and possible reasons are stated in our supplementary document.
+    </p>
+    <video id="nes218_test_08" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nes218_test_08.mp4"
+              type="video/mp4">
+    </video>
+
+    <video id="nes264_free_08" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/nes264_free_08.mp4"
+              type="video/mp4">
+    </video>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 id="cross_comp" class="title is-2">Comparisons on Cross-identity Reenactment</h2>
+    
+    <h2 id="cross_normal" class="title is-4"><br>Driven by Normal Expressions</h3>
+      <video id="CROSS_074" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/074_cross218.mp4"
+                type="video/mp4">
+      </video>
+      <video id="CROSS_253" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/253_cross104.mp4"
+                type="video/mp4">
+      </video>
+
+    <h2 id="cross_extreme" class="title is-4"><br>Driven by Extreme Expressions</h3>
+      <video id="CROSS_218" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/218_cross264.mp4"
+                type="video/mp4">
+      </video>
+
+      <video id="CROSS_306" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/306_cross302.mp4"
+                type="video/mp4">
+      </video>
+
+    <h2 id="cross_voca" class="title is-4"><br><br>Driven by Talking Head (with audio)</h3>
+      <p> Data from <a href="https://voca.is.tue.mpg.de/">VOCA (Capture, learning, and synthesis of 3D speaking styles, CVPR 2019).</a> <br> 
+      </p>
+      <br>
+      <p class="note"> 
+        The Gaussian Head Avatar employs the BFM module as their 3DMM model and provide a repository to estimate the BFM parameters from multi-view videos. However, they <strong>do not</strong> provide a script to <strong>estimate the BFM parameters from a given mesh scan</strong>. So we don't provide their talking head demo here. <br>
+      </p>
+      <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/218_138s1_with_audio_font.mp4"
+                type="video/mp4">
+      </video>
+      <video id="VOCA_218" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/218_137s2_with_audio_font.mp4"
+                type="video/mp4">
+      </video>
+
+    <h2 id="cross_edit" class="title is-4"><br><br>Driving Edited Head Avatars</h3>
+
+    <p>Driven by a <b>normal</b> expression of <b>his own</b>:</p>
+    <video id="EXP_218_EDIT" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/MeGA218_exp5_edit.mp4"
+              type="video/mp4">
+    </video>
+
+
+    <br>
+    <br>
+    <p>Driven by a <b>extreme</b> expression of <b>another person</b>:</p>
+    <video id="CROSS_218_EDIT" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/MeGA218_cross264_edit.mp4"
+              type="video/mp4">
+    </video>
+
+  </div>
+</section>
+
+</body>
+</html>
