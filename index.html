@@ -140,6 +140,67 @@
     .toc li a ul li a:before {
         content: "\f00c"; /* Check mark for sub-items */
     }
+
+
+    /* 双Logo容器 */
+.dual-logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 0 20px;
+  padding: 20px 0;
+  border-bottom: 2px solid #EEE;
+}
+
+/* 统一Logo样式 */
+.logo-image-method {
+  width: auto;
+  height: 150px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.logo-image-cvpr {
+  width: auto;
+  height: 130px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* 方法Logo专属样式 */
+.method-logo {
+  padding-right: 20px;
+}
+.method-logo .logo-caption {
+  color: #2B5B84;  /* 与标题蓝保持一致 */
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.1em;
+  margin-top: 12px;
+}
+
+/* CVPR Logo专属样式 */
+.conference-logo .logo-caption {
+  color: #B31917;  /* CVPR官方红 */
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  margin-top: 12px;
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  .dual-logo-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+  .method-logo {
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid #DDD;
+      padding-bottom: 30px;
+  }
+}
   </style>
 </head>
 <body>
@@ -150,7 +211,22 @@
       <div class="columns ≈">
         <div class="column has-text-centered">
           <!-- <img src="./static/images/logo.png" alt="MeGA LOGO" width="300"> -->
-          <img src="./static/images/logo_v1.png" alt="项目图标" width="200">
+          <!-- <img src="./static/images/logo_v1.png" alt="项目图标" width="200">  -->
+          <div class="dual-logo-container">
+            <!-- 方法Logo -->
+            <div class="method-logo">
+                <img src="./static/images/logo_v1.png" 
+                     alt="MEGA Framework Logo"
+                     class="logo-image-method">
+            </div>
+            
+            <!-- CVPR Logo -->
+            <div class="conference-logo">
+                <img src="./static/images/cvpr_2025_logo.png" 
+                     alt="CVPR 2025 Official Logo"
+                     class="logo-image-cvpr">
+            </div>
+        </div>
           <h1 class="title is-1 publication-title"> Hybrid <u>Me</u>sh-<u>G</u>aussian Head <u>A</u>vatar for High-Fidelity Rendering and Head Editing</h1>
           
           <div class="is-size-4 publication-authors">
